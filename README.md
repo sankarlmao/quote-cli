@@ -19,6 +19,6 @@ cd quote-cli
 
 ```bash
 chmod +x quotecli.py
-(Optional) Move it to a directory in your PATH to run it globally:
+#(Optional) Move it to a directory in your PATH to run it globally:
 sudo mv quotecli.py /usr/local/bin/quote
-then just type quote in the terminal (if you have moved the file PATH to run locally )
+#then just type quote in the terminal (if you have moved the file PATH to run locally )
