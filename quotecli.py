@@ -5,11 +5,13 @@ import sys
 
 def get_quote():
     try:
-        response = requests.get("https://api.quotable.io/random")
+        response = requests.get("https://zenquotes.io/api/random")
         if response.status_code == 200:
             data = response.json()
-            quote = data['content']
-            author = data['author']
+            # FIX: Access the first item in the list `data[0]`
+            # and use the correct keys 'q' and 'a'.
+            quote = data[0]['q']
+            author = data[0]['a']
             return f'"{quote}"\n— {author}'
         else:
             return "Failed to fetch quote. Try again later."
